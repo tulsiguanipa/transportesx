@@ -1,0 +1,380 @@
+/*font-family: 'Raleway', sans-serif;
+font-family: 'Archivo Black', sans-serif;*/
+
+/*Inicio base (donde esta la información en común)*/
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 20px; /*alto de linea*/
+}
+
+header{
+	background-color: #2e64a1;
+	padding: 1em 0; /* el em viene por defecto del body */
+}
+
+header h1{
+	color: white;
+	font-size: 2.5em;
+	font-style: italic;
+	font-weight: 100; /* 300 era el maximo*/
+	display: inline-block; 	/* el h1 va hacia bajo, lo toma como una caja pero lo toma en linea, lo que ocupa de pantalla*/
+	position: relative;
+	bottom: 0.8em;
+}
+
+nav{
+	background-color: #64a9ed;
+	margin-bottom: 2em;
+}
+
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li{
+	display: inline-block;
+	width: 20%;
+}
+
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	text-align: center; /* es la alineacion del texto o imagenes con respecto a la caja*/
+	padding: 0.2em 0.4em;
+	display: block; /* para que lo tome dentro del nav*/
+}
+
+nav ul li a:hover{
+	background-color: rgba(0,0,0,0.3);
+	/* se usa :hover para que el boton de nav vaya variando cuando se pasa el cursor*/
+}
+
+
+nav ul li a.activo{
+/* el punto va pegado a la clase, dentro del li tiene una clase*/
+
+	background-color: #4c76a5;
+}
+
+footer{
+	background-color: #ccc;
+	clear: both;
+	color: #333;
+	font-size: 0.7em;
+	font-style: italic;
+	text-align: center;
+	padding: 3em 0;
+	margin-top: 2em;
+}
+
+footer p{
+	margin: 0;
+}
+
+
+
+.holder{
+	/* caja contenedora del todo el contenido se deberia colocar al principio*/
+	width: 960px;
+	margin: 0 auto; /* va en el medio*/
+}
+
+
+h2{
+	font-weight: 400;
+	color: #2e64a1;
+	margin: 0 0 1em;
+}
+
+.left{
+	float: left;	
+}
+
+.right{
+	float: right;
+}
+
+
+
+/*fin de base*/
+
+/*inicio home*/
+
+.homeimg{
+	margin-bottom: 1.5em;
+}
+
+.columnas{
+	overflow: hidden;
+
+}
+
+.bienvenidos{
+	padding-right: 2em;
+	width: 75%;
+}
+
+.testimonios{
+	width: 25%;
+}
+
+.testimonio{
+	background-color: #ddd;
+	padding: 1em;
+}
+
+
+.bienvenidos,.testimonios{
+
+	box-sizing: border-box;
+}
+
+
+.bienvenidos p{
+
+	font-size: 1.3em;
+}
+
+.testimonio .cita{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.4em;	
+	display: block;	/* te va mostrando la caja, genera el enter que se necesita*/
+
+}
+
+.testimonio .autor{
+	text-align: center;
+	font-size: 0.7em;
+	font-style: italic;
+	margin: 1em 0;
+	/*background-color: orange;*/
+	display: block;	/*tiene un display distinto, el block permite cambiar el modo de visualizar la caja con margin y align*/
+
+}
+
+
+/*fin home*/
+
+/*Inicio nosotros*/
+
+
+.personas{
+	overflow: hidden;
+/*el hidden te muestra el contenido scroll muestra el contendio*/
+}
+
+.historia p{
+	font-size: 0.8em;
+}
+
+.persona{
+	width: 18%;
+	border: 1px solid #eee;
+	border-radius: 0.25em;
+	float: left;
+	margin-left: 2.25%;
+	box-sizing: border-box;
+}
+
+
+.persona figure{
+	margin: 0.8em 0 1em;
+	/*margenes arriba laterales inferior*/
+	text-align: center;
+	/*centrar textos, centra imagenes dentro de una caja, etiqueta img y figure*/
+}
+
+
+.persona figure img{
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5)	 /*etiqueta para sombra x/y y el tamaño de la sombra, ademas el color de la sombra*/
+
+}
+
+.persona h5, .persona h6{
+	text-align: center;
+	color: #2e64a1;
+	font-weight: normal;
+	margin: 0;
+	/*aspectos iguales entre las dos etiquetas*/
+}
+
+.persona h5{
+	font-size: 0.9em;
+
+}
+
+
+.persona h6{
+	font-size:0.8em; 
+	font-style: italic;
+	margin-bottom: 1em;
+
+}
+
+.persona p{
+	font-size: 0.7em;
+	color: #444;
+	margin: 0 1em 1em;
+}
+
+
+.persona:first-child{
+	margin-left: 0;
+	/* hay que hacerlo contra una caja, se le puede colocar first child para que pueda matar los margenes finales o primero, tambien se puede usar last child*/
+}
+
+
+/*fin nosotros*/
+
+/* Inicio Servicios*/
+
+
+.servicio{
+	border: 1px solid #ddd;
+	border-radius: 0.7em;
+	margin: 1em 0;
+	padding: 1em;
+	overflow: hidden; 	/* arregla la superposicion de las lineas, la caja de servicio al no tener alto no interpreta los que tiene, visualizacion de los elementos, mostrame elementos que podrian estar ocultos*/
+}
+
+.servicio figure img{
+	border-radius: 0.8em;
+}
+
+.servicio .info{
+	width: 75%;
+}
+
+.servicio .info h4{
+	color: #2e64a1;
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: 500;
+	margin: 0 0 1em;
+	border-bottom: 1px solid #2e64a1;
+	padding-bottom: 0.5em;	/* permite la separacion entre el contenido y la linea*/
+}
+
+.servicio .info p{
+	font-size: 0.8em;
+	line-height: 1.2em;
+}
+
+.servicio:nth-child(odd) figure{
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+
+.servicio:nth-child(odd) .info{
+	float: right;
+}
+
+.servicio:nth-child(even) figure{
+	float: right;
+	margin: 0 0 0 1em;
+}
+
+.servicio:nth-child(even) .info{
+	float: left;
+
+}
+
+/* odd:impar  even:par los hijos pares o hijos impares todas las cajas 1,3,5 funcionan de un modo, y las otras que son pares funcionan del otro opcion para tablas o cuando hay un diseño hay imagenes que se quiere mover de posicion*/
+
+/* Fin Servicios*/
+
+/*inicio galeria*/
+
+.galeria .foto{
+	/*display: inline-block;*/
+	float: left;
+	width: 18%;
+	margin: 1em 0 1em 2.5%;
+	border: 1px solid #ddd;
+	padding: 0.3em;
+	box-sizing: border-box;
+
+}
+
+.galeria .foto img{
+	width: 100%;
+	/* max-width min-width*/
+	display: block;
+}
+
+.galeria .foto:nth-child(5n+1){
+	margin-left: 0;
+	/*border-color: red;*/
+}
+
+/*fin de galeria*/
+
+/*inicio contacto*/
+
+.columna{
+	width: 50%;
+	padding: 0 0.625em;
+	box-sizing: border-box;
+	
+}
+
+.columna.left{
+	/*lineas separadoras/ las dos clases juntas cuando estan en la mismo div, tiene la dos clases*/
+	border-right: 1px solid #ddd;
+}
+
+.columna.right p{
+	font-size: 0.8em;
+
+}
+.columna.right ul li{
+	font-size: 0.8em;
+}
+
+.formulario label{
+	width: 22%;
+	/*vertical-align: top;*/ 
+	/*background-color: red;*/
+	/*display: inline-block;*/
+	display: block;	/*bajan la cajita y sube el titulo*/
+}
+
+.formulario input,
+.formulario textarea{
+	background-color: #ddd;
+	border-radius: 5px;
+	border: 1px solid #999;
+	font-size: 0.8em;
+	padding: 0.4em 0.6em;
+	width: 95%;
+
+}
+
+.formulario textarea{
+	height: 10em;
+	resize: none;
+	/* se mantiene el area estatica de la caja de comentario*/
+}
+
+.formulario input[type="submit"]{
+	width: auto;
+	background-color: #6da9ed;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	color: white;
+	font-size: 1em;
+	text-align: center;
+}
+
+.formulario .acciones {
+	text-align: right;
+}
+
+
+/*fin de contacto*/

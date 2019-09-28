@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Formulario</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+	<h2>Completa el siguiente Formulario</h2>
+	<form action="" method=""> 
+		<!-- campo donde se completa usuario contraseña/envio de newlestter, accion. 1 etiqueta por formulario-->
+		<p>
+			<label for="nom"> Nombre</label> <!-- titulo de la casilla a completar -->
+			<input type="text" name="" value="" id="nom" /> <!-- el id y el for tiene que esta igual, mismo nombre para que funcione -->
+		</p>
+		<p>
+		<input type="text" name="" placeholder="Usuario" />
+		</p>
+
+		<p>
+			<label for="apellido"> Apellido</label>
+			<input type="text" name="" id="apellido" placeholder="escriba su apellido" />
+		</p>
+
+		<p>
+			<label for="">Contraseña</label>
+			<input type="password" name=""  placeholder="" />
+		</p>
+
+		<p>
+			<label>Sexo</label>
+			<ul>
+				<li>
+					<input type="radio" name="sexo" value="mujer" />
+					<label for="">Mujer</label>
+				</li>
+				<li>
+					<input type="radio" name="sexo" value="hombre" />
+					<label for="">Hombre</label>
+					<!-- para que funcione la seleccion de una variable tiene que estar completado el name con el mismo nombre o (a o b) -->
+				</li>
+			</ul>
+		</p>
+
+		<p>
+			<label for="">Hobbies</label>
+			<ul>
+				<li>
+					<input type="checkbox" name="hobbies[]" value="bailar" />
+					<label for=""> Bailar</label>
+				</li>
+				<li>
+					<input type="checkbox" name="hobbies[]" value="cantar" />
+					<label for=""> Cantar</label>
+				</li>
+				<li>
+					<input type="checkbox" name="hobbies[]" value="correr" />
+					<label for=""> Correr</label>
+				</li>
+				<li>
+					<input type="checkbox" name="hobbies[]" value="nadar" />
+					<label for=""> Nadar</label>
+				</li>
+				<li>
+					<input type="checkbox" name="hobbies[]" value="pintar" />
+					<label for=""> Pintar</label>
+				</li>
+			</ul>
+		</p>
+		<p>
+			<label for="">Estudios</label>
+			<select name="">
+				<option value="defecto">Seleccionar...</option>
+				<option value="primario">Primario</option>
+				<option value="Secundario">Secundario</option>
+				<option value="Terciario">Terciario</option>
+				<option value="Universitario">Universitario</option>
+			</select>
+		</p>
+
+		<p>
+			<label for="">Comentarios</label>
+			<textarea name="" cols="30" rows="10" ></textarea> <!-- multilinea, se puede controlar por css, el cierre de etiquetas tienen que ir vacio, ya que luego se ven esos espacios en el html -->
+		</p>
+
+		<p>
+			<input type="submit" value="Enviar" />
+			<input type="reset" value="Borrar" />
+		</p>
+	</form>
+</body>
+</html>
